@@ -2,4 +2,5 @@
 
  1. Clonar el proyecto.
  2. Realizar la instalación de dependencias ejecutando `npm i`
- 4. En la raíz del proyecto ejecutar `npm run test-automation`
+ 3. En la raíz del proyecto ejecutar `nodemon server.js`
+ 4. Ingresar a la ruta http://localhost:8080/graphql para ejecutar las queries.

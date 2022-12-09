@@ -29,3 +29,6 @@
 {"level":"error","message":"Error: MongoNotConnectedError: Client must be connected before running operations"}
 {"level":"error","message":"Error: MongoNotConnectedError: Client must be connected before running operations"}
 {"level":"error","message":"Error: MongoNotConnectedError: Client must be connected before running operations"}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required., title: Path `title` is required."}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required., title: Path `title` is required."}
+{"level":"error","message":"Error: ValidationError: thumbnail: Path `thumbnail` is required., title: Path `title` is required."}

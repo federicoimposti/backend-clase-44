@@ -11,6 +11,9 @@ const info = require('./info');
 const randoms = require('./randoms');
 const logger = require('../logs/logger');
 const error = require('./errors');
+const { graphqlHTTP } = require('express-graphql');
+const { schema } = require('../graphql/buildSchema');
+const { getProducts, saveProducts, deleteProduct, updateProduct } = require('../controllers/productsGraphql');
 
 router.use((req, res, next) => {
     logger.info(`Ruta: '${req.originalUrl}' - Método '${req.method}'`);
@@ -18,6 +21,21 @@ router.use((req, res, next) => {
 });
 
 router.use('/', productFormRouter);
+
+router.use(
+    "/graphql",
+    graphqlHTTP({
+      schema,
+      rootValue: {
+        getProducts,
+        saveProducts,
+        deleteProduct,
+        updateProduct
+      },
+      graphiql: true,
+    })
+);
+
 router.use('/productos', productsRouter);
 // router.use('/api/productos-test', productsFakerRouter);
 router.use('/api/randoms', randoms);

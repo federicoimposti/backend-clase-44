@@ -1,0 +1,32 @@
+query {
+  getProductos {
+    _id
+    title
+    description
+    thumbnail
+  }
+}
+
+mutation {
+    saveProducts({title:"Prueba", thumbnail: "https://images.com", price: "231"}) {
+      _id
+      title
+      thumbnail
+      price
+    }
+}
+
+mutation {
+    updateProduct( _id: "6392bd3a306e9d57dad2b4d9", datos: {title:"Pruebas", thumbnail: "https://images.cosm", price: "2312"}) {
+      _id
+      title
+      thumbnail
+      price
+    }
+}
+
+mutation {
+    deleteProduct(_id: "6392b7378994065b52a7b890") { 
+        data
+    }
+}
